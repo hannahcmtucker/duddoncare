@@ -2,6 +2,7 @@ import * as React from "react";
 import { Global } from "@emotion/react";
 import { css } from "@emotion/react";
 import emotionNormalize from "emotion-normalize";
+import theme from "../theme";
 
 export default function GlobalStyles() {
   return <Global styles={globalStyles} />;
@@ -21,6 +22,25 @@ const globalStyles = css`
     box-sizing: border-box;
     line-height: 1.5;
     scroll-behavior: smooth;
+
+    --font-size-nano: ${theme.fontSize.nano};
+    --font-size-centi: ${theme.fontSize.centi};
+    --font-size-deci: ${theme.fontSize.deci};
+    --font-size-hecto: ${theme.fontSize.hecto};
+    --font-size-kilo: ${theme.fontSize.kilo};
+    --font-size-mega: ${theme.fontSize.mega};
+    --font-size-giga: ${theme.fontSize.giga};
+
+    --font-size-small: ${theme.spacing.small};
+    --font-size-medium: ${theme.spacing.medium};
+    --font-size-normal: ${theme.spacing.normal};
+    --font-size-large: ${theme.spacing.large};
+    --font-size-xLarge: ${theme.spacing.xLarge};
+
+    --color-text: ${theme.colors.text};
+    --color-secondary: ${theme.colors.secondary};
+    --color-primary: ${theme.colors.primary};
+    --color-primaryAlt: ${theme.colors.primaryAlt};
   }
 
   input,
@@ -37,9 +57,26 @@ const globalStyles = css`
     font-weight: normal;
     -webkit-text-size-adjust: none;
     -webkit-font-smoothing: antialiased;
+    color: var(--color-text);
   }
 
   p {
     margin: 0 0 1em;
+  }
+
+  button {
+    font-family: "Poppins", helvetica, arial, sans-serif;
+  }
+
+  @media (min-width: ${theme.media.small}) {
+    html {
+      font-size: ${theme.fontSize.centi};
+    }
+  }
+
+  @media (min-width: ${theme.media.large}) {
+    html {
+      font-size: ${theme.fontSize.deci};
+    }
   }
 `;
