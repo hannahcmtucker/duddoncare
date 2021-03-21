@@ -1,15 +1,19 @@
 import React from "react";
 import styled from "@emotion/styled";
 import PhoneIcon from "../icons/PhoneIcon";
-import { phoneNumber } from "../copy";
+import { phoneNumberEmma, phoneNumberSusie } from "../copy";
+import Nav from "./Nav";
 
 // TODO use SVG for logo once exported properly
 export default function Header() {
   return (
-    <Wrapper>
-      <div>To Do: Logo</div>
-      <PhoneDetails />
-    </Wrapper>
+    <>
+      <Wrapper>
+        <div>To Do: Logo</div>
+        <PhoneDetails />
+      </Wrapper>
+      <Nav />
+    </>
   );
 }
 
@@ -17,7 +21,8 @@ const PhoneDetails = () => {
   return (
     <PhoneDetailsWrapper>
       <PhoneIcon />
-      <div>{phoneNumber}</div>
+      <div>{phoneNumberEmma}</div>
+      <div>{phoneNumberSusie}</div>
     </PhoneDetailsWrapper>
   );
 };

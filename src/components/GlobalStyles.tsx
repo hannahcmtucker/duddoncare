@@ -31,11 +31,11 @@ const globalStyles = css`
     --font-size-mega: ${theme.fontSize.mega};
     --font-size-giga: ${theme.fontSize.giga};
 
-    --font-size-small: ${theme.spacing.small};
-    --font-size-medium: ${theme.spacing.medium};
-    --font-size-normal: ${theme.spacing.normal};
-    --font-size-large: ${theme.spacing.large};
-    --font-size-xLarge: ${theme.spacing.xLarge};
+    --spacing-small: ${theme.spacing.small};
+    --spacing-medium: ${theme.spacing.medium};
+    --spacing-normal: ${theme.spacing.normal};
+    --spacing-large: ${theme.spacing.large};
+    --spacing-xLarge: ${theme.spacing.xLarge};
 
     --color-text: ${theme.colors.text};
     --color-secondary: ${theme.colors.secondary};
