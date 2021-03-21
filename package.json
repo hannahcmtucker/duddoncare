@@ -49,5 +49,8 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
     "react-test-renderer": "^17.0.1"
+  },
+  "volta": {
+    "node": "14.16.0"
   }
 }
