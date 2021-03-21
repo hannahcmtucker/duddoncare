@@ -8,10 +8,12 @@ export default function Hero() {
   return (
     <BackgroundImage>
       <Overlay />
-      <TextWrapper>
-        <HeroHeading>{heroHeading}</HeroHeading>
-        <HeroSubtitle>{heroSubtitle}</HeroSubtitle>
-      </TextWrapper>
+      <Wrapper>
+        <Text>
+          <HeroHeading>{heroHeading}</HeroHeading>
+          <HeroSubtitle>{heroSubtitle}</HeroSubtitle>
+        </Text>
+      </Wrapper>
     </BackgroundImage>
   );
 }
@@ -32,10 +34,10 @@ const Overlay = styled.div`
   width: 100%;
   height: 100%;
   background-color: var(--color-primary);
-  opacity: 60%;
+  opacity: 70%;
 `;
 
-const TextWrapper = styled.div`
+const Wrapper = styled.div`
   position: absolute;
   left: 0;
   top: 0;
@@ -43,12 +45,17 @@ const TextWrapper = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  color: white;
+  align-items: center;
   padding: var(--spacing-large);
 
   @media (min-width: ${theme.media.large}) {
     padding: var(--spacing-xLarge);
   }
+`;
+
+const Text = styled.div`
+  max-width: 65ch;
+  color: white;
 `;
 
 const HeroHeading = styled.h1`
