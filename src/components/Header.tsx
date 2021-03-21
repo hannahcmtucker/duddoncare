@@ -2,14 +2,15 @@ import React from "react";
 import styled from "@emotion/styled";
 import PhoneIcon from "../icons/PhoneIcon";
 import { phoneNumberEmma, phoneNumberSusie } from "../copy";
+import Logo from "./Logo";
 import Nav from "./Nav";
+import theme from "../theme";
 
-// TODO use SVG for logo once exported properly
 export default function Header() {
   return (
     <>
       <Wrapper>
-        <div>To Do: Logo</div>
+        <Logo />
         <PhoneDetails />
       </Wrapper>
       <Nav />
@@ -21,8 +22,8 @@ const PhoneDetails = () => {
   return (
     <PhoneDetailsWrapper>
       <PhoneIcon />
-      <div>{phoneNumberEmma}</div>
-      <div>{phoneNumberSusie}</div>
+      <PhoneNumber>{phoneNumberEmma}</PhoneNumber>
+      <PhoneNumber>{phoneNumberSusie}</PhoneNumber>
     </PhoneDetailsWrapper>
   );
 };
@@ -30,11 +31,26 @@ const PhoneDetails = () => {
 const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
-  padding: 16px;
+  align-items: center;
+  padding: var(--spacing-large);
+
+  @media (min-width: ${theme.media.large}) {
+    padding: var(--spacing-xLarge);
+  }
 `;
 
 const PhoneDetailsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: var(--spacing-normal);
+`;
+
+const PhoneNumber = styled.p`
+  margin: 0;
+  font-size: var(--font-size-deci);
+
+  @media (min-width: ${theme.media.large}) {
+    font-size: var(--font-size-kilo);
+  }
 `;

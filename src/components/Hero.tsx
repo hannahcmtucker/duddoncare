@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import { heroHeading, heroSubtitle } from "../copy";
 import hands from "../images/hands.jpg";
+import theme from "../theme";
 
 export default function Hero() {
   return (
@@ -42,8 +43,12 @@ const TextWrapper = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: var(--spacing-xLarge);
   color: white;
+  padding: var(--spacing-large);
+
+  @media (min-width: ${theme.media.large}) {
+    padding: var(--spacing-xLarge);
+  }
 `;
 
 const HeroHeading = styled.h1`
