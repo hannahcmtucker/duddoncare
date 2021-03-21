@@ -1,7 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import Header from "./Header";
 import GlobalStyles from "./GlobalStyles";
+import Header from "./Header";
+import Hero from "./Hero";
 
 export default () => {
   return (
@@ -20,6 +21,7 @@ export default () => {
       </Helmet>
       <GlobalStyles />
       <Header />
+      <Hero />
     </>
   );
 };
