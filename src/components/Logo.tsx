@@ -1,15 +1,28 @@
 import React from "react";
 import theme from "../theme";
 import styled from "@emotion/styled";
+import { useStaticQuery, graphql } from "gatsby";
 
 // TODO: get URL for link
 export default function Logo() {
+  const { site } = useStaticQuery(query);
+
   return (
-    <LogoLink href="#">
+    <LogoLink href={site.siteMetadata.siteUrl}>
       <LogoSvg />
     </LogoLink>
   );
 }
+
+const query = graphql`
+  query Logo {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
+  }
+`;
 
 const LogoSvg = () => {
   return (
