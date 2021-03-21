@@ -1,12 +1,19 @@
 import React from "react";
 import styled from "@emotion/styled";
 
+interface BaseSvgProps {
+  viewBox?: string;
+  size?: string;
+  fillColor?: string;
+  children?: React.ReactNode;
+}
+
 export default function BaseSvg({
   viewBox = "0 0 24 24",
   size = "1.5em",
   fillColor = "currentColor",
   children,
-}) {
+}: BaseSvgProps) {
   return (
     <Svg
       viewBox={viewBox}
