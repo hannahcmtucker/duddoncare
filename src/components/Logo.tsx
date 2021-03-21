@@ -2,14 +2,16 @@ import React from "react";
 import theme from "../theme";
 import styled from "@emotion/styled";
 import { useStaticQuery, graphql } from "gatsby";
+import VisuallyHidden from "./VisuallyHidden";
+import { logoLinkText } from "../copy";
 
-// TODO: get URL for link
 export default function Logo() {
   const { site } = useStaticQuery(query);
 
   return (
     <LogoLink href={site.siteMetadata.siteUrl}>
       <LogoSvg />
+      <VisuallyHidden>{logoLinkText}</VisuallyHidden>
     </LogoLink>
   );
 }

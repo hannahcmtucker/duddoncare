@@ -10,7 +10,9 @@ export default () => {
       <SEO />
       <GlobalStyles />
       <Header />
-      <Hero />
+      <main>
+        <Hero />
+      </main>
     </>
   );
 };
