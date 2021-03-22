@@ -13,7 +13,7 @@ export default function BaseSvg({
   size = "1.5em",
   fillColor = "currentColor",
   children,
-}: BaseSvgProps) {
+}: BaseSvgProps): JSX.Element {
   return (
     <Svg
       viewBox={viewBox}

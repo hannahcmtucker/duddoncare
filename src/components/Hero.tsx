@@ -4,7 +4,7 @@ import { heroHeading, heroSubtitle } from "../copy";
 import hands from "../images/hands.jpg";
 import theme from "../theme";
 
-export default function Hero() {
+export default function Hero(): JSX.Element {
   return (
     <BackgroundImage>
       <Overlay />

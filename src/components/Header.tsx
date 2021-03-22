@@ -6,7 +6,7 @@ import Logo from "./Logo";
 import Nav from "./Nav";
 import theme from "../theme";
 
-export default function Header() {
+export default function Header(): JSX.Element {
   return (
     <>
       <Wrapper>

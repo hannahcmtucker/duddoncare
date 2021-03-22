@@ -1,7 +1,7 @@
 import * as React from "react";
 import Layout from "../components/Layout";
 
-const IndexPage = () => {
+const IndexPage = (): JSX.Element => {
   return <Layout />;
 };
 

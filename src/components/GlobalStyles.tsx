@@ -1,10 +1,9 @@
 import * as React from "react";
-import { Global } from "@emotion/react";
-import { css } from "@emotion/react";
+import { Global, css } from "@emotion/react";
 import emotionNormalize from "emotion-normalize";
 import theme from "../theme";
 
-export default function GlobalStyles() {
+export default function GlobalStyles(): JSX.Element {
   return <Global styles={globalStyles} />;
 }
 

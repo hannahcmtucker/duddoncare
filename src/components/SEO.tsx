@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-const SEO = () => {
+export default function SEO(): JSX.Element {
   const { site } = useStaticQuery(query);
 
   const { title, siteUrl, description } = site.siteMetadata;
@@ -27,7 +27,7 @@ const SEO = () => {
       <link rel="canonical" href={siteUrl} />
     </Helmet>
   );
-};
+}
 
 const query = graphql`
   query SEO {
@@ -40,5 +40,3 @@ const query = graphql`
     }
   }
 `;
-
-export default SEO;

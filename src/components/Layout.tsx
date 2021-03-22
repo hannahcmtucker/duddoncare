@@ -4,7 +4,7 @@ import Header from "./Header";
 import Hero from "./Hero";
 import SEO from "./SEO";
 
-export default () => {
+export default function Layout(): JSX.Element {
   return (
     <>
       <SEO />
@@ -15,4 +15,4 @@ export default () => {
       </main>
     </>
   );
-};
+}
