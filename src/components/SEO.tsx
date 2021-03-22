@@ -1,11 +1,11 @@
-import React from "react";
-import { Helmet } from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import { useStaticQuery, graphql } from 'gatsby'
 
 export default function SEO(): JSX.Element {
-  const { site } = useStaticQuery(query);
+  const { site } = useStaticQuery(query)
 
-  const { title, siteUrl, description } = site.siteMetadata;
+  const { title, siteUrl, description } = site.siteMetadata
 
   return (
     <Helmet>
@@ -26,7 +26,7 @@ export default function SEO(): JSX.Element {
       <link rel="stylesheet" href="https://use.typekit.net/tij0cln.css" />
       <link rel="canonical" href={siteUrl} />
     </Helmet>
-  );
+  )
 }
 
 const query = graphql`
@@ -39,4 +39,4 @@ const query = graphql`
       }
     }
   }
-`;
+`

@@ -14,8 +14,8 @@
     "clean": "gatsby clean",
     "test": "jest --watch",
     "test:all": "jest",
-    "prettier:check": "prettier -l --ignore-path ./.gitignore '*.{js,ts,tsx,css,md,json}'",
-    "prettier": "prettier --write  --ignore-path ./.gitignore '*.{js,ts,tsx,css,md,json}'",
+    "prettier:check": "prettier -l --ignore-path ./.gitignore '**/*.+(js|ts|tsx|css|md|json)'",
+    "prettier": "prettier --write  --ignore-path ./.gitignore '**/*.+(js|ts|tsx|css|md|json)'",
     "lint": "eslint --max-warnings 0 '*.{js,ts,tsx,json}'",
     "pre-commit": "lint-staged"
   },

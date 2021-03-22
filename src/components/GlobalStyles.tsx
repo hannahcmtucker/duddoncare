@@ -1,10 +1,10 @@
-import * as React from "react";
-import { Global, css } from "@emotion/react";
-import emotionNormalize from "emotion-normalize";
-import theme from "../theme";
+import * as React from 'react'
+import { Global, css } from '@emotion/react'
+import emotionNormalize from 'emotion-normalize'
+import theme from '../theme'
 
 export default function GlobalStyles(): JSX.Element {
-  return <Global styles={globalStyles} />;
+  return <Global styles={globalStyles} />
 }
 
 const globalStyles = css`
@@ -52,7 +52,7 @@ const globalStyles = css`
     width: 100%;
     height: 100%;
     margin: 0;
-    font-family: "Poppins", helvetica, arial, sans-serif;
+    font-family: 'Poppins', helvetica, arial, sans-serif;
     font-weight: normal;
     -webkit-text-size-adjust: none;
     -webkit-font-smoothing: antialiased;
@@ -64,7 +64,7 @@ const globalStyles = css`
   }
 
   button {
-    font-family: "Poppins", helvetica, arial, sans-serif;
+    font-family: 'Poppins', helvetica, arial, sans-serif;
   }
 
   @media (min-width: ${theme.media.small}) {
@@ -78,4 +78,4 @@ const globalStyles = css`
       font-size: ${theme.fontSize.deci};
     }
   }
-`;
+`

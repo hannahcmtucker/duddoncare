@@ -1,8 +1,8 @@
-import styled from "@emotion/styled";
-import { hideVisually } from "polished";
+import styled from '@emotion/styled'
+import { hideVisually } from 'polished'
 
 const VisuallyHidden = styled.span`
   ${hideVisually};
-`;
+`
 
-export default VisuallyHidden;
+export default VisuallyHidden

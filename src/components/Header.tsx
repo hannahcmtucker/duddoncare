@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "@emotion/styled";
-import PhoneIcon from "../icons/PhoneIcon";
-import { phoneNumberEmma, phoneNumberSusie } from "../copy";
-import Logo from "./Logo";
-import Nav from "./Nav";
-import theme from "../theme";
+import React from 'react'
+import styled from '@emotion/styled'
+import PhoneIcon from '../icons/PhoneIcon'
+import { phoneNumberEmma, phoneNumberSusie } from '../copy'
+import Logo from './Logo'
+import Nav from './Nav'
+import theme from '../theme'
 
 export default function Header(): JSX.Element {
   return (
@@ -15,7 +15,7 @@ export default function Header(): JSX.Element {
       </Wrapper>
       <Nav />
     </>
-  );
+  )
 }
 
 const PhoneDetails = () => {
@@ -25,8 +25,8 @@ const PhoneDetails = () => {
       <PhoneNumber>{phoneNumberEmma}</PhoneNumber>
       <PhoneNumber>{phoneNumberSusie}</PhoneNumber>
     </PhoneDetailsWrapper>
-  );
-};
+  )
+}
 
 const Wrapper = styled.header`
   display: flex;
@@ -37,14 +37,14 @@ const Wrapper = styled.header`
   @media (min-width: ${theme.media.large}) {
     padding: var(--spacing-xLarge);
   }
-`;
+`
 
 const PhoneDetailsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-left: var(--spacing-normal);
-`;
+`
 
 const PhoneNumber = styled.p`
   margin: 0;
@@ -53,4 +53,4 @@ const PhoneNumber = styled.p`
   @media (min-width: ${theme.media.large}) {
     font-size: var(--font-size-kilo);
   }
-`;
+`

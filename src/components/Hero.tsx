@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "@emotion/styled";
-import { heroHeading, heroSubtitle } from "../copy";
-import hands from "../images/hands.jpg";
-import theme from "../theme";
+import React from 'react'
+import styled from '@emotion/styled'
+import { heroHeading, heroSubtitle } from '../copy'
+import hands from '../images/hands.jpg'
+import theme from '../theme'
 
 export default function Hero(): JSX.Element {
   return (
@@ -15,7 +15,7 @@ export default function Hero(): JSX.Element {
         </Text>
       </Wrapper>
     </BackgroundImage>
-  );
+  )
 }
 
 const BackgroundImage = styled.div`
@@ -25,7 +25,7 @@ const BackgroundImage = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-`;
+`
 
 const Overlay = styled.div`
   position: absolute;
@@ -35,7 +35,7 @@ const Overlay = styled.div`
   height: 100%;
   background-color: var(--color-primary);
   opacity: 70%;
-`;
+`
 
 const Wrapper = styled.div`
   position: absolute;
@@ -51,19 +51,19 @@ const Wrapper = styled.div`
   @media (min-width: ${theme.media.large}) {
     padding: var(--spacing-xLarge);
   }
-`;
+`
 
 const Text = styled.div`
   max-width: 65ch;
   color: white;
-`;
+`
 
 const HeroHeading = styled.h1`
   margin: var(--spacing-xLarge) 0 0 0;
   font-weight: normal;
-`;
+`
 
 const HeroSubtitle = styled.p`
   margin-top: var(--spacing-xLarge);
   font-size: var(--font-size-hecto);
-`;
+`

@@ -1,17 +1,17 @@
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react'
+import styled from '@emotion/styled'
 
 interface BaseSvgProps {
-  viewBox?: string;
-  size?: string;
-  fillColor?: string;
-  children?: React.ReactNode;
+  viewBox?: string
+  size?: string
+  fillColor?: string
+  children?: React.ReactNode
 }
 
 export default function BaseSvg({
-  viewBox = "0 0 24 24",
-  size = "1.5em",
-  fillColor = "currentColor",
+  viewBox = '0 0 24 24',
+  size = '1.5em',
+  fillColor = 'currentColor',
   children,
 }: BaseSvgProps): JSX.Element {
   return (
@@ -25,7 +25,7 @@ export default function BaseSvg({
     >
       {children}
     </Svg>
-  );
+  )
 }
 
 const Svg = styled.svg<{ fillColor: string }>`
@@ -33,5 +33,5 @@ const Svg = styled.svg<{ fillColor: string }>`
   flex-shrink: 0;
   vertical-align: middle;
   transition: transform 0.2s ease-out;
-  ${(props) => `fill: ${props.fillColor}`};
-`;
+  ${props => `fill: ${props.fillColor}`};
+`
