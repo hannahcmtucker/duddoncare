@@ -16,7 +16,8 @@
     "test:all": "jest",
     "prettier:check": "prettier -l --ignore-path ./.gitignore '*.{js,ts,tsx,css,md,json}'",
     "prettier": "prettier --write  --ignore-path ./.gitignore '*.{js,ts,tsx,css,md,json}'",
-    "lint": "eslint --max-warnings 0 '*.{js,ts,tsx,json}'"
+    "lint": "eslint --max-warnings 0 '*.{js,ts,tsx,json}'",
+    "pre-commit": "lint-staged"
   },
   "dependencies": {
     "@emotion/react": "^11.1.5",
@@ -41,16 +42,31 @@
     "@testing-library/react": "^11.2.5",
     "@types/jest": "^26.0.21",
     "@types/react-helmet": "^6.1.0",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
     "babel-preset-gatsby": "^1.1.0",
+    "eslint": "^7.22.0",
+    "eslint-config-prettier": "^8.1.0",
     "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.3.2",
     "eslint-plugin-json": "^2.1.2",
+    "husky": "^5.2.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
-    "react-test-renderer": "^17.0.1"
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "react-test-renderer": "^17.0.1",
+    "typescript": "^4.2.3"
   },
   "volta": {
     "node": "14.16.0"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,css,md,json}": "prettier --write",
+    "*.{js,ts,tsx,json}": "eslint --cache --fix",
+    "*.{js,ts,tsx}": "npm run test:all -- --findRelatedTests"
   }
 }
