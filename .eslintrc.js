@@ -9,9 +9,10 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:@typescript-eslint/recommended',
     'plugin:json/recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:jest/recommended',
     'prettier',
   ],
-  plugins: ['@typescript-eslint', 'jest'],
   rules: {
     'no-duplicate-imports': 2,
     'import/no-cycle': 2,
@@ -24,5 +25,6 @@ module.exports = {
       },
     ],
     'consistent-return': 'off',
+    'jest/expect-expect': 0,
   },
 }
