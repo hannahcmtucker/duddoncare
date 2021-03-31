@@ -46,6 +46,7 @@ const theme = {
     xxLarge: '1050px',
     xxxLarge: '1440px',
   },
+  lineLength: '65ch',
 }
 
 export default theme

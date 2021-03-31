@@ -4,6 +4,7 @@ import Header from './Header'
 import Hero from './Hero'
 import SEO from './SEO'
 import About from './About'
+import Services from './Services'
 
 export default function Layout(): JSX.Element {
   return (
@@ -14,6 +15,7 @@ export default function Layout(): JSX.Element {
       <main>
         <Hero />
         <About />
+        <Services />
       </main>
     </>
   )

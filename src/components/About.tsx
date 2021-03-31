@@ -72,7 +72,7 @@ const AboutWrapper = styled.div`
 `
 
 const TextWrapper = styled.div`
-  width: 65ch;
+  width: var(--line-length);
 `
 
 const AboutParagraph = styled.p`
@@ -88,7 +88,7 @@ const ProfileImagesWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 65ch;
+  max-width: var(--line-length);
   margin-top: var(--spacing-xLarge);
 
   @media (min-width: ${theme.media.medium}) {

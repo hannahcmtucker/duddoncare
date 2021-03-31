@@ -29,6 +29,7 @@ const Wrapper = styled.div`
 
 const imageStyles = {
   gridArea: '1/1',
+  height: '100%',
   maxHeight: 500,
 }
 
@@ -37,7 +38,7 @@ const Overlay = styled.div`
   width: 100%;
   height: 100%;
   background-color: var(--color-primary);
-  opacity: 70%;
+  opacity: 80%;
 `
 
 const Text = styled.div`

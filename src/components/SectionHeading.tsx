@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 
-const SectionHeading = styled.h2`
+const SectionHeading = styled.h2<{ isLight?: boolean }>`
   position: relative;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -14,7 +14,8 @@ const SectionHeading = styled.h2`
     top: calc(-1 * var(--spacing-medium));
     display: block;
     width: 50px;
-    border-bottom: 3px solid var(--color-text);
+    border-bottom: 3px solid
+      ${props => (props.isLight ? 'white' : 'var(--color-text)')};
   }
 `
 

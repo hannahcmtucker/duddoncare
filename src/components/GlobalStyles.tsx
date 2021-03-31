@@ -44,6 +44,7 @@ const globalStyles = css`
     --color-primaryAlt: ${theme.colors.primaryAlt};
 
     --gutter: ${theme.gutter.mobile};
+    --line-length: ${theme.lineLength};
   }
 
   input,
