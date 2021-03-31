@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import { StaticImage } from 'gatsby-plugin-image'
 import SectionHeading from './SectionHeading'
+import theme from '../theme'
 import {
   aboutHeading,
   aboutParagraph1,
@@ -12,6 +14,8 @@ import {
   aboutQualifications3,
   aboutQualifications4,
   aboutQualifications5,
+  emma,
+  susie,
 } from '../copy'
 
 export default function About(): JSX.Element {
@@ -30,8 +34,34 @@ export default function About(): JSX.Element {
           <ListItem>{aboutQualifications4}</ListItem>
           <ListItem>{aboutQualifications5}</ListItem>
         </ul>
+        <ProfileImages />
       </TextWrapper>
     </AboutWrapper>
+  )
+}
+
+const ProfileImages: React.FC = () => {
+  return (
+    <ProfileImagesWrapper>
+      <ImageWrapper>
+        <StaticImage
+          src="../images/emma.jpg"
+          style={imageStyles}
+          alt={emma}
+          placeholder="blurred"
+        />
+        <p>{emma}</p>
+      </ImageWrapper>
+      <ImageWrapper>
+        <StaticImage
+          src="../images/susie.jpg"
+          style={imageStyles}
+          alt={susie}
+          placeholder="blurred"
+        />
+        <p>{susie}</p>
+      </ImageWrapper>
+    </ProfileImagesWrapper>
   )
 }
 
@@ -52,3 +82,38 @@ const AboutParagraph = styled.p`
 const ListItem = styled.li`
   margin-bottom: 0.5em;
 `
+
+const ProfileImagesWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 65ch;
+  margin-top: var(--spacing-xLarge);
+
+  @media (min-width: ${theme.media.medium}) {
+    flex-direction: row;
+  }
+
+  @media (min-width: ${theme.media.large}) {
+    justify-content: space-between;
+    padding: 0 100px;
+  }
+`
+
+const ImageWrapper = styled.div`
+  text-align: center;
+
+  @media (min-width: ${theme.media.medium}) {
+    & + & {
+      margin-left: 20px;
+    }
+  }
+`
+
+const imageStyles = {
+  margin: '16px',
+  width: '150px',
+  height: '200px',
+  borderRadius: '50%',
+}
