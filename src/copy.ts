@@ -2,6 +2,8 @@ export const emma = 'Emma'
 export const susie = 'Susie'
 export const phoneNumberEmma = '07519751368'
 export const phoneNumberSusie = '07754339115'
+export const emmaPhoneInternational = '+447519751368'
+export const susiePhoneInternational = '+447754339115'
 export const heroSubtitle =
   'We provide comfort, compassion and companionship for those needing care in their home.'
 export const logoLinkText = 'Home page'
@@ -27,3 +29,9 @@ export const service1 = 'Personal Care'
 export const service2 = 'Home help'
 export const service3 = 'Companionship visits'
 export const service4 = 'Dementia Care'
+export const contactHeading = 'Contact Us'
+export const contactParagraph =
+  'Get in touch to see how we can help your loved one today.'
+export const contactEmail = 'hello@duddoncare.co.uk'
+export const contactAddress =
+  'Duddon Care, Cumpstones, Nr Millom, Cumbria, LA18 5LS'

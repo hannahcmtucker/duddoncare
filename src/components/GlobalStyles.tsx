@@ -72,6 +72,17 @@ const globalStyles = css`
     font-family: 'Poppins', helvetica, arial, sans-serif;
   }
 
+  a {
+    color: ${theme.colors.primaryAlt};
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus {
+    color: ${theme.colors.primaryAlt};
+    text-decoration: underline;
+  }
+
   @media (min-width: ${theme.media.large}) {
     html {
       font-size: ${theme.fontSize.deci};
