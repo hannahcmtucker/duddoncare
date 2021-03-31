@@ -42,6 +42,7 @@ const theme = {
   media: {
     small: '320px',
     medium: '375px',
+    regular: '480px',
     large: '720px',
     xLarge: '900px',
     xxLarge: '1050px',

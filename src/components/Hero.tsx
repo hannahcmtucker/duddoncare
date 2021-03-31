@@ -67,10 +67,10 @@ const HeroTitle = styled.h1`
 
 const HeroText = styled.p`
   margin: var(--spacing-large) 0 0 0;
-  font-size: var(--font-size-deci);
+  font-size: var(--font-size-centi);
 
   @media (min-width: ${theme.media.medium}) {
-    font-size: var(--font-size-kilo);
+    font-size: var(--font-size-hecto);
   }
 
   @media (min-width: ${theme.media.large}) {

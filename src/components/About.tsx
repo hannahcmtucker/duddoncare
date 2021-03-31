@@ -91,7 +91,7 @@ const ProfileImagesWrapper = styled.div`
   max-width: var(--line-length);
   margin-top: var(--spacing-xLarge);
 
-  @media (min-width: ${theme.media.medium}) {
+  @media (min-width: ${theme.media.regular}) {
     flex-direction: row;
   }
 
@@ -104,7 +104,7 @@ const ProfileImagesWrapper = styled.div`
 const ImageWrapper = styled.div`
   text-align: center;
 
-  @media (min-width: ${theme.media.medium}) {
+  @media (min-width: ${theme.media.regular}) {
     & + & {
       margin-left: 20px;
     }
