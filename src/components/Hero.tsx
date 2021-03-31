@@ -1,69 +1,64 @@
 import React from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
 import styled from '@emotion/styled'
-import { heroHeading, heroSubtitle } from '../copy'
-import hands from '../images/hands.jpg'
+import { heroSubtitle } from '../copy'
 import theme from '../theme'
 
 export default function Hero(): JSX.Element {
   return (
-    <BackgroundImage>
+    <Wrapper>
+      <StaticImage
+        src="../images/hands.jpg"
+        style={imageStyles}
+        layout="fullWidth"
+        alt=""
+        loading="eager"
+      />
       <Overlay />
-      <Wrapper>
-        <Text>
-          <HeroHeading>{heroHeading}</HeroHeading>
-          <HeroSubtitle>{heroSubtitle}</HeroSubtitle>
-        </Text>
-      </Wrapper>
-    </BackgroundImage>
+      <Text>
+        <HeroText>{heroSubtitle}</HeroText>
+      </Text>
+    </Wrapper>
   )
 }
 
-const BackgroundImage = styled.div`
-  position: relative;
-  height: 100vh;
-  background-image: url(${hands});
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+const Wrapper = styled.div`
+  display: grid;
+  align-items: center;
 `
 
+const imageStyles = {
+  gridArea: '1/1',
+  maxHeight: 500,
+}
+
 const Overlay = styled.div`
-  position: absolute;
-  left: 0;
-  top: 0;
+  grid-area: 1/1;
   width: 100%;
   height: 100%;
   background-color: var(--color-primary);
   opacity: 70%;
 `
 
-const Wrapper = styled.div`
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: var(--spacing-large);
+const Text = styled.div`
+  grid-area: 1/1;
+  position: relative;
+  place-self: center;
+  max-width: 65ch;
+  margin: 0 var(--spacing-large);
 
   @media (min-width: ${theme.media.large}) {
-    padding: var(--spacing-xLarge);
+    margin: 0 var(--spacing-xLarge);
   }
 `
 
-const Text = styled.div`
-  max-width: 65ch;
+const HeroText = styled.p`
+  font-size: var(--font-size-deci);
   color: white;
-`
+  margin: var(--spacing-large) 0;
 
-const HeroHeading = styled.h1`
-  margin: var(--spacing-xLarge) 0 0 0;
-  font-weight: normal;
-`
-
-const HeroSubtitle = styled.p`
-  margin-top: var(--spacing-xLarge);
-  font-size: var(--font-size-hecto);
+  @media (min-width: ${theme.media.large}) {
+    margin: var(--spacing-xLarge) 0;
+    font-size: var(--font-size-giga);
+  }
 `

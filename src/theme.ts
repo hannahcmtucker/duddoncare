@@ -18,7 +18,7 @@ const theme = {
     hecto: '20px',
     kilo: '24px',
     mega: '26px',
-    giga: '32px',
+    giga: '36px',
   },
   spacing: {
     small: ' 8px',
