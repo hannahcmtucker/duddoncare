@@ -25,7 +25,7 @@ export default function Contact(): JSX.Element {
     <ContactWrapper>
       <TextWrapper>
         <SectionHeading isLight>{contactHeading}</SectionHeading>
-        <SubText>{contactSubText}</SubText>
+        <p>{contactSubText}</p>
         <Spacer>
           <p>
             <PhoneNumber href={telEmma} inverse>
@@ -63,10 +63,6 @@ const TextWrapper = styled.div`
   max-width: var(--line-length);
   color: white;
   margin: 0 auto;
-`
-
-const SubText = styled.p`
-  padding-top: 1em;
 `
 
 const Spacer = styled.div`

@@ -69,7 +69,7 @@ const TextWrapper = styled.div`
 `
 
 const List = styled.ul`
-  padding: 1em 0 0 0;
+  padding: 0;
   list-style: none;
 
   @media (min-width: ${theme.media.medium}) {
