@@ -1,10 +1,16 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import PhoneIcon from '../icons/PhoneIcon'
-import { phoneNumberEmma, phoneNumberSusie } from '../copy'
+import {
+  phoneNumberEmma,
+  phoneNumberSusie,
+  emmaPhoneInternational,
+  susiePhoneInternational,
+} from '../copy'
 import Logo from './Logo'
 import Nav from './Nav'
 import theme from '../theme'
+import Link from './Link'
 
 export default function Header(): JSX.Element {
   return (
@@ -19,11 +25,14 @@ export default function Header(): JSX.Element {
 }
 
 const PhoneDetails = () => {
+  const telEmma = `tel:${emmaPhoneInternational}`
+  const telSusie = `tel:${susiePhoneInternational}`
+
   return (
     <PhoneDetailsWrapper>
       <PhoneIcon />
-      <PhoneNumber>{phoneNumberEmma}</PhoneNumber>
-      <PhoneNumber>{phoneNumberSusie}</PhoneNumber>
+      <PhoneNumber href={telEmma}>{phoneNumberEmma}</PhoneNumber>
+      <PhoneNumber href={telSusie}>{phoneNumberSusie}</PhoneNumber>
     </PhoneDetailsWrapper>
   )
 }
@@ -42,7 +51,7 @@ const PhoneDetailsWrapper = styled.div`
   margin-left: var(--spacing-normal);
 `
 
-const PhoneNumber = styled.p`
+const PhoneNumber = styled(Link)`
   margin: 0;
   font-size: var(--font-size-deci);
 
