@@ -43,6 +43,7 @@ const PhoneDetailsWrapper = styled.div`
 `
 
 const PhoneNumber = styled.p`
+  margin: 0;
   font-size: var(--font-size-deci);
 
   @media (min-width: ${theme.media.large}) {

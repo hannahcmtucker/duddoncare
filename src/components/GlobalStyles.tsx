@@ -22,6 +22,7 @@ const globalStyles = css`
     line-height: 1.5;
     scroll-behavior: smooth;
     font-size: ${theme.fontSize.centi};
+    color: ${theme.colors.text};
 
     --font-size-nano: ${theme.fontSize.nano};
     --font-size-centi: ${theme.fontSize.centi};
@@ -63,7 +64,7 @@ const globalStyles = css`
   }
 
   p {
-    margin: 0;
+    margin: 0 0 1em 0;
   }
 
   button {

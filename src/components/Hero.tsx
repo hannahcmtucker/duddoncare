@@ -49,6 +49,7 @@ const Text = styled.div`
 `
 
 const HeroText = styled.p`
+  margin: 0;
   font-size: var(--font-size-deci);
   color: white;
 

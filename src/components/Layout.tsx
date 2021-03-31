@@ -3,6 +3,7 @@ import GlobalStyles from './GlobalStyles'
 import Header from './Header'
 import Hero from './Hero'
 import SEO from './SEO'
+import About from './About'
 
 export default function Layout(): JSX.Element {
   return (
@@ -12,6 +13,7 @@ export default function Layout(): JSX.Element {
       <Header />
       <main>
         <Hero />
+        <About />
       </main>
     </>
   )

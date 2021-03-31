@@ -3,3 +3,20 @@ export const phoneNumberSusie = '07754339115'
 export const heroSubtitle =
   'We provide comfort, compassion and companionship for those needing care in their home.'
 export const logoLinkText = 'Home page'
+export const aboutHeading = 'About Us'
+export const aboutParagraph1 =
+  'We’re passionate and dedicated private carers working in the Millom area.'
+export const aboutParagraph2 =
+  'Between us we’ve amassed over 30 years of valuable experience. We aim to provide the highest quality care, delivered with the compassion and understanding that your loved one deserves.'
+export const aboutParagraph3 =
+  'We believe in tailoring support to the individual, and specialise in clients that are reluctant or frightened to have carers in.'
+export const aboutParagraph4 =
+  'We are highly trained carers, both holding the following qualifications:'
+export const aboutQualifications1 = 'Care Certificate'
+export const aboutQualifications2 = 'NVQ3 in Health and Social Care'
+export const aboutQualifications3 =
+  'Medical Qualifications; including catheter care, simple wounds, safe handling of medication and moving and handling'
+export const aboutQualifications4 =
+  'Dementia Care Champions, including delivering dementia health training for an award winning care company'
+export const aboutQualifications5 =
+  'Full Disclosure and Barring Service (DBS) check'
