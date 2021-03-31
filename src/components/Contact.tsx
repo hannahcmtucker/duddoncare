@@ -5,7 +5,7 @@ import Link from './Link'
 import theme from '../theme'
 import {
   contactHeading,
-  contactParagraph,
+  contactSubText,
   emma,
   susie,
   phoneNumberEmma,
@@ -25,7 +25,7 @@ export default function Contact(): JSX.Element {
     <ContactWrapper>
       <TextWrapper>
         <SectionHeading isLight>{contactHeading}</SectionHeading>
-        <p>{contactParagraph}</p>
+        <SubText>{contactSubText}</SubText>
         <Spacer>
           <p>
             <PhoneNumber href={telEmma} inverse>
@@ -63,6 +63,10 @@ const TextWrapper = styled.div`
   max-width: var(--line-length);
   color: white;
   margin: 0 auto;
+`
+
+const SubText = styled.p`
+  padding-top: 1em;
 `
 
 const Spacer = styled.div`

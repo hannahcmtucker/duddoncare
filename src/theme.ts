@@ -12,6 +12,7 @@ const colors = {
 
 const theme = {
   fontSize: {
+    pico: '12px',
     nano: '14px',
     centi: '16px',
     deci: '18px',

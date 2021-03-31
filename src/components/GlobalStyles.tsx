@@ -24,6 +24,7 @@ const globalStyles = css`
     font-size: ${theme.fontSize.centi};
     color: ${theme.colors.text};
 
+    --font-size-pico: ${theme.fontSize.pico};
     --font-size-nano: ${theme.fontSize.nano};
     --font-size-centi: ${theme.fontSize.centi};
     --font-size-deci: ${theme.fontSize.deci};
