@@ -32,11 +32,7 @@ const Wrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-large);
-
-  @media (min-width: ${theme.media.large}) {
-    padding: var(--spacing-xLarge);
-  }
+  padding: var(--gutter);
 `
 
 const PhoneDetailsWrapper = styled.div`
@@ -47,7 +43,6 @@ const PhoneDetailsWrapper = styled.div`
 `
 
 const PhoneNumber = styled.p`
-  margin: 0;
   font-size: var(--font-size-deci);
 
   @media (min-width: ${theme.media.large}) {

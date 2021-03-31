@@ -27,6 +27,11 @@ const theme = {
     large: '24px',
     xLarge: '32px',
   },
+  gutter: {
+    mobile: '16px',
+    tablet: '24px',
+    desktop: '32px',
+  },
   colors: {
     primary: colors.skyBlue,
     primaryAlt: colors.prussianBlue,

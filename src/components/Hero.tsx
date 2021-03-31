@@ -44,21 +44,19 @@ const Text = styled.div`
   grid-area: 1/1;
   position: relative;
   place-self: center;
-  max-width: 65ch;
-  margin: 0 var(--spacing-large);
-
-  @media (min-width: ${theme.media.large}) {
-    margin: 0 var(--spacing-xLarge);
-  }
+  max-width: 55ch;
+  margin: var(--gutter);
 `
 
 const HeroText = styled.p`
   font-size: var(--font-size-deci);
   color: white;
-  margin: var(--spacing-large) 0;
+
+  @media (min-width: ${theme.media.medium}) {
+    font-size: var(--font-size-kilo);
+  }
 
   @media (min-width: ${theme.media.large}) {
-    margin: var(--spacing-xLarge) 0;
     font-size: var(--font-size-giga);
   }
 `

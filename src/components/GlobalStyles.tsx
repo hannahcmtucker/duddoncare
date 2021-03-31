@@ -21,6 +21,7 @@ const globalStyles = css`
     box-sizing: border-box;
     line-height: 1.5;
     scroll-behavior: smooth;
+    font-size: ${theme.fontSize.centi};
 
     --font-size-nano: ${theme.fontSize.nano};
     --font-size-centi: ${theme.fontSize.centi};
@@ -40,6 +41,8 @@ const globalStyles = css`
     --color-secondary: ${theme.colors.secondary};
     --color-primary: ${theme.colors.primary};
     --color-primaryAlt: ${theme.colors.primaryAlt};
+
+    --gutter: ${theme.gutter.mobile};
   }
 
   input,
@@ -60,22 +63,23 @@ const globalStyles = css`
   }
 
   p {
-    margin: 0 0 1em;
+    margin: 0;
   }
 
   button {
     font-family: 'Poppins', helvetica, arial, sans-serif;
   }
 
-  @media (min-width: ${theme.media.small}) {
-    html {
-      font-size: ${theme.fontSize.centi};
-    }
-  }
-
   @media (min-width: ${theme.media.large}) {
     html {
       font-size: ${theme.fontSize.deci};
+      --gutter: ${theme.gutter.tablet};
+    }
+  }
+
+  @media (min-width: ${theme.media.xLarge}) {
+    html {
+      --gutter: ${theme.gutter.desktop};
     }
   }
 `
