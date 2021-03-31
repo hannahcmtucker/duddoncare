@@ -13,6 +13,7 @@ export default function Footer(): JSX.Element {
 const FooterWrapper = styled.footer`
   padding: 0 var(--gutter);
   background-color: var(--color-primaryAlt);
+  margin-top: -1px;
 `
 
 const TextWrapper = styled.div`

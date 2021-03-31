@@ -7,7 +7,7 @@ const SectionHeading = styled.h2<{ isLight?: boolean }>`
   font-weight: 600;
   margin-bottom: var(--spacing-large);
   margin-top: calc(var(--spacing-large) * 2 + var(--spacing-medium));
-  padding-bottom: var(--spacing-large);
+  padding-bottom: var(--spacing-normal);
 
   &::before {
     content: '';

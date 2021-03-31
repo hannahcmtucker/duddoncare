@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import styled from '@emotion/styled'
-import { heroSubtitle } from '../copy'
+import { heroTitle, heroSubtitle } from '../copy'
 import theme from '../theme'
 
 export default function Hero(): JSX.Element {
@@ -16,6 +16,7 @@ export default function Hero(): JSX.Element {
       />
       <Overlay />
       <Text>
+        <HeroTitle>{heroTitle}</HeroTitle>
         <HeroText>{heroSubtitle}</HeroText>
       </Text>
     </Wrapper>
@@ -45,20 +46,34 @@ const Text = styled.div`
   grid-area: 1/1;
   position: relative;
   place-self: center;
-  max-width: 55ch;
+  max-width: var(--line-length);
   margin: var(--gutter);
+  color: white;
+`
+
+const HeroTitle = styled.h1`
+  margin: 0;
+  font-weight: normal;
+  font-size: var(--font-size-hecto);
+
+  @media (min-width: ${theme.media.medium}) {
+    font-size: var(--font-size-mega);
+  }
+
+  @media (min-width: ${theme.media.large}) {
+    font-size: var(--font-size-giga);
+  }
 `
 
 const HeroText = styled.p`
-  margin: 0;
+  margin: var(--spacing-large) 0 0 0;
   font-size: var(--font-size-deci);
-  color: white;
 
   @media (min-width: ${theme.media.medium}) {
     font-size: var(--font-size-kilo);
   }
 
   @media (min-width: ${theme.media.large}) {
-    font-size: var(--font-size-giga);
+    font-size: var(--font-size-mega);
   }
 `
