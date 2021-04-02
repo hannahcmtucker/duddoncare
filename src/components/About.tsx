@@ -46,7 +46,8 @@ const ProfileImages: React.FC = () => {
       <ImageWrapper>
         <StaticImage
           src="../images/emma.jpg"
-          style={imageStyles}
+          style={wrapperStyles}
+          imgStyle={imageStyles}
           alt={emma}
           placeholder="blurred"
         />
@@ -55,7 +56,8 @@ const ProfileImages: React.FC = () => {
       <ImageWrapper>
         <StaticImage
           src="../images/susie.jpg"
-          style={imageStyles}
+          style={wrapperStyles}
+          imgStyle={imageStyles}
           alt={susie}
           placeholder="blurred"
         />
@@ -111,9 +113,12 @@ const ImageWrapper = styled.div`
   }
 `
 
-const imageStyles = {
+const wrapperStyles = {
   margin: '16px',
   width: '150px',
   height: '200px',
+}
+
+const imageStyles = {
   borderRadius: '50%',
 }

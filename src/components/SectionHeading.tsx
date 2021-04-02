@@ -12,10 +12,10 @@ const SectionHeading = styled.h2<{ isLight?: boolean }>`
   &::before {
     content: '';
     position: absolute;
-    top: calc(-1 * var(--spacing-medium));
+    top: calc(-1 * var(--spacing-large));
     display: block;
-    width: 50px;
-    border-bottom: 3px solid
+    width: 40px;
+    border-bottom: 2px solid
       ${props => (props.isLight ? 'white' : 'var(--color-text)')};
   }
 `

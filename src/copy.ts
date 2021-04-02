@@ -25,7 +25,7 @@ export const aboutQualifications4 =
   'Dementia Care Champions, including delivering dementia health training for an award winning care company'
 export const aboutQualifications5 =
   'Full Disclosure and Barring Service (DBS) check'
-export const servicesHeading = 'Services'
+export const servicesHeading = 'Our Services'
 export const service1 = 'Personal Care'
 export const service2 = 'Home help'
 export const service3 = 'Companionship'
