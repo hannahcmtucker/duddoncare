@@ -8,7 +8,7 @@ import Services from './Services'
 import Contact from './Contact'
 import Footer from './Footer'
 
-export default function Layout(): JSX.Element {
+export default function Layout() {
   return (
     <>
       <SEO />

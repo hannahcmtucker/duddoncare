@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Layout from '../components/Layout'
 
-const IndexPage = (): JSX.Element => {
+const IndexPage = () => {
   return <Layout />
 }
 

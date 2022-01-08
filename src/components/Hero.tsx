@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 import { heroTitle, heroSubtitle } from '../copy'
 import theme from '../theme'
 
-export default function Hero(): JSX.Element {
+export default function Hero() {
   return (
     <Wrapper>
       <StaticImage

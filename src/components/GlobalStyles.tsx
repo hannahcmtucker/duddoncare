@@ -3,7 +3,7 @@ import { Global, css } from '@emotion/react'
 import emotionNormalize from 'emotion-normalize'
 import theme from '../theme'
 
-export default function GlobalStyles(): JSX.Element {
+export default function GlobalStyles() {
   return <Global styles={globalStyles} />
 }
 

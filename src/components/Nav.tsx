@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 
-export default function Nav(): JSX.Element {
+export default function Nav() {
   return <NavWrapper />
 }
 

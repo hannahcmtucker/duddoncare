@@ -5,7 +5,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import VisuallyHidden from './VisuallyHidden'
 import { logoLinkText } from '../copy'
 
-export default function Logo(): JSX.Element {
+export default function Logo() {
   const { site } = useStaticQuery(query)
 
   return (
@@ -26,7 +26,7 @@ const query = graphql`
   }
 `
 
-const LogoSvg = (): JSX.Element => {
+const LogoSvg = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1298 698.1">
       <path

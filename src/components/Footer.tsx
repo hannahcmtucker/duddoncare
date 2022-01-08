@@ -2,7 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { copyright } from '../copy'
 
-export default function Footer(): JSX.Element {
+export default function Footer() {
   return (
     <FooterWrapper>
       <TextWrapper>{copyright}</TextWrapper>

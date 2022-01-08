@@ -11,7 +11,7 @@ import {
   service4,
 } from '../copy'
 
-export default function Services(): JSX.Element {
+export default function Services() {
   return (
     <Wrapper>
       <StaticImage

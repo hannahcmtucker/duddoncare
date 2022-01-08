@@ -18,7 +18,7 @@ import {
   susie,
 } from '../copy'
 
-export default function About(): JSX.Element {
+export default function About() {
   return (
     <AboutWrapper>
       <TextWrapper>
