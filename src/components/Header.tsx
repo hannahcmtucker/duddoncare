@@ -1,18 +1,13 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import PhoneIcon from '../icons/PhoneIcon'
-import {
-  phoneNumberEmma,
-  phoneNumberSusie,
-  emmaPhoneInternational,
-  susiePhoneInternational,
-} from '../copy'
 import Logo from './Logo'
 import Nav from './Nav'
 import theme from '../theme'
-import Link from './Link'
+import _PhoneNumber from './PhoneNumber'
+import { people } from '../constants'
 
-export default function Header(): JSX.Element {
+export default function Header() {
   return (
     <>
       <Wrapper>
@@ -25,14 +20,12 @@ export default function Header(): JSX.Element {
 }
 
 const PhoneDetails = () => {
-  const telEmma = `tel:${emmaPhoneInternational}`
-  const telSusie = `tel:${susiePhoneInternational}`
-
   return (
     <PhoneDetailsWrapper>
       <PhoneIcon />
-      <PhoneNumber href={telEmma}>{phoneNumberEmma}</PhoneNumber>
-      <PhoneNumber href={telSusie}>{phoneNumberSusie}</PhoneNumber>
+      {people.map(person => (
+        <PhoneNumber person={person} />
+      ))}
     </PhoneDetailsWrapper>
   )
 }
@@ -51,7 +44,7 @@ const PhoneDetailsWrapper = styled.div`
   margin-left: var(--spacing-normal);
 `
 
-const PhoneNumber = styled(Link)`
+const PhoneNumber = styled(_PhoneNumber)`
   margin: 0;
   font-size: var(--font-size-deci);
 

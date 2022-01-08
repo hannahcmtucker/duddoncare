@@ -2,47 +2,31 @@ import React from 'react'
 import styled from '@emotion/styled'
 import SectionHeading from './SectionHeading'
 import Link from './Link'
+import _PhoneNumber from './PhoneNumber'
 import theme from '../theme'
 import {
   contactHeading,
   contactSubText,
-  emma,
-  susie,
-  phoneNumberEmma,
-  phoneNumberSusie,
-  emmaPhoneInternational,
-  susiePhoneInternational,
   contactEmail,
   contactAddress,
 } from '../copy'
+import { people } from '../constants'
 
-export default function Contact(): JSX.Element {
-  const mailTo = `mailto:${contactEmail}`
-  const telEmma = `tel:${emmaPhoneInternational}`
-  const telSusie = `tel:${susiePhoneInternational}`
-
+export default function Contact() {
   return (
     <ContactWrapper>
       <TextWrapper>
         <SectionHeading isLight>{contactHeading}</SectionHeading>
         <p>{contactSubText}</p>
         <Spacer>
-          <p>
-            <PhoneNumber href={telEmma} inverse>
-              {phoneNumberEmma}
-            </PhoneNumber>
-            - {emma}
-          </p>
-
-          <p>
-            <PhoneNumber href={telSusie} inverse>
-              {phoneNumberSusie}
-            </PhoneNumber>
-            - {susie}
-          </p>
+          {people.map(person => (
+            <p>
+              <PhoneNumber person={person} inverse /> - {person}
+            </p>
+          ))}
         </Spacer>
         <Spacer>
-          <Email href={mailTo} inverse>
+          <Email href={`mailto:${contactEmail}`} inverse>
             {contactEmail}
           </Email>
         </Spacer>
@@ -68,7 +52,7 @@ const TextWrapper = styled.div`
 const Spacer = styled.div`
   padding-top: var(--spacing-normal);
 `
-const PhoneNumber = styled(Link)`
+const PhoneNumber = styled(_PhoneNumber)`
   margin-right: var(--spacing-small);
 `
 

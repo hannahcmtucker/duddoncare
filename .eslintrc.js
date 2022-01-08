@@ -26,5 +26,6 @@ module.exports = {
     ],
     'consistent-return': 'off',
     'jest/expect-expect': 0,
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
   },
 }

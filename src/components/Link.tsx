@@ -5,6 +5,7 @@ interface LinkProps {
   inverse?: boolean
   href: string
   children: React.ReactElement | string
+  className?: string
 }
 
 const Link: React.FC<LinkProps> = ({ inverse = false, children, ...rest }) => {
