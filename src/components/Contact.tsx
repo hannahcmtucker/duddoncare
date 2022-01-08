@@ -20,7 +20,7 @@ export default function Contact() {
         <p>{contactSubText}</p>
         <Spacer>
           {people.map(person => (
-            <p>
+            <p key={person}>
               <PhoneNumber person={person} inverse /> - {person}
             </p>
           ))}

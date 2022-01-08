@@ -16,6 +16,7 @@ import {
   aboutQualifications5,
   emma,
   susie,
+  heather,
 } from '../copy'
 
 export default function About() {
@@ -63,6 +64,16 @@ const ProfileImages: React.FC = () => {
         />
         <p>{susie}</p>
       </ImageWrapper>
+      <ImageWrapper>
+        <StaticImage
+          src="../images/heather.jpg"
+          style={wrapperStyles}
+          imgStyle={imageStyles}
+          alt={heather}
+          placeholder="blurred"
+        />
+        <p>{heather}</p>
+      </ImageWrapper>
     </ProfileImagesWrapper>
   )
 }
@@ -95,11 +106,12 @@ const ProfileImagesWrapper = styled.div`
 
   @media (min-width: ${theme.media.regular}) {
     flex-direction: row;
+    flex-wrap: wrap;
   }
 
   @media (min-width: ${theme.media.large}) {
     justify-content: space-between;
-    padding: 0 100px;
+    flex-wrap: nowrap;
   }
 `
 

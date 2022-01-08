@@ -24,7 +24,7 @@ const PhoneDetails = () => {
     <PhoneDetailsWrapper>
       <PhoneIcon />
       {people.map(person => (
-        <PhoneNumber person={person} />
+        <PhoneNumber person={person} key={person} />
       ))}
     </PhoneDetailsWrapper>
   )
