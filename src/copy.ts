@@ -1,6 +1,5 @@
 export const emma = 'Emma'
 export const susie = 'Susie'
-export const heather = 'Heather'
 export const heroTitle = 'Duddon Care'
 export const heroSubtitle =
   'We provide comfort, compassion and companionship for those needing care in their home.'
